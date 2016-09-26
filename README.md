@@ -89,3 +89,24 @@ class EventbookingControllerOverrideRegister extends EventbookingControllerRegis
 }
 ```
 4.Copy the original code of the method you want to override into the class you defined above and customize it to meet your need. Please note that these classes extends the original class, so you can call any (public/protected) methods in the parent class. 
+
+## Override method in a model class
+
+If you need to override a method inside a model, please follow the steps below:
+
+1. Create folder **override** under components/com_eventbooking/model folder (or under  administrator/components/com_eventbooking/model if you want to override a backend model)
+2. Create a php file (same name with the php file which contains the method you want to override, for example **register.php**, **list.php**, **categories.php**)
+3. Add a blank class into that PHP file. The class name must follow this Rule: It has the word **Override** compare to the original class name and extends the original class. For example:
+
+```php
+/**
+ * EventbookingModelOverrideRegister class
+ *
+ * This class is used to show you how to override a model class in Events Booking.
+ */
+class EventBookingModelOverrideRegister extends EventBookingModelRegister
+{
+
+}
+```
+4.Copy the original code of the method you want to override into the class you defined above and customize it to meet your need. Please note that these classes extends the original class, so you can call any (public/protected) methods in the parent class. 
