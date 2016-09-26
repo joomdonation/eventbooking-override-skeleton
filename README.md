@@ -110,3 +110,24 @@ class EventBookingModelOverrideRegister extends EventBookingModelRegister
 }
 ```
 4.Copy the original code of the method you want to override into the class you defined above and customize it to meet your need. Please note that these classes extends the original class, so you can call any (public/protected) methods in the parent class. 
+
+## Override method in a view class
+
+If you need to override a method inside a view, please follow the steps below:
+
+1. Create folder **override** under components/com_eventbooking/view folder (or under  administrator/components/com_eventbooking/view if you want to override a backend model)
+2. Create a new folder - the name of this folder must be the same with name of the view you want to override, for example **register**, **registrants**, **search**...
+3. Create a php file - same name with the php file which contains the method you want to override, usually html.php, put it into the above folder
+4. Add a blank class into that PHP file. The class name must follow this Rule: It has the word **Override** compare to the original class name and extends the original class. For example:
+
+```php
+/**
+ * Class EventbookingViewOverrideRegisterHtml
+ *
+ * This class is used to show you how to override a view class in Events Booking.
+ */
+class EventbookingViewOverrideRegisterHtml extends EventbookingViewRegisterHtml
+{
+}
+```
+5.Copy the original code of the method you want to override into the class you defined above and customize it to meet your need. Please note that these classes extends the original class, so you can call any (public/protected) methods in the parent class. 
