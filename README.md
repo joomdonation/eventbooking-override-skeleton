@@ -29,7 +29,7 @@ To customize a method in one of these classes, please folow the steps below:
 1. Create folder **override** under components/com_eventbooking/helper folder 
 2. Create a php file (same name with the php file which contains the method you want to override, for example **helper.php**, **mail.php**, **jquery.php**
 
-3. Add a blank class into that PHP file. The class name must follow this Rule: It has the word **Override** compare to the original class name and extends the original class. For example:
+3. Add a blank class into that PHP file. The class name must follow this Rule: It has the word **Override** inserted after **EventbookingHelper** compare to the original class name and extends the original class. For example:
 
 ```php
 /**
@@ -75,7 +75,7 @@ If you need to override a method inside a controller, please follow the steps be
 
 1. Create folder **override** under components/com_eventbooking/controller folder (or under  administrator/components/com_eventbooking/controller if you want to override a backend controller)
 2. Create a php file (same name with the php file which contains the method you want to override, for example **register.php**, **event.php**, **registrant.php**)
-3. Add a blank class into that PHP file. The class name must follow this Rule: It has the word **Override** compare to the original class name and extends the original class. For example:
+3. Add a blank class into that PHP file. The class name must follow this Rule: It has the word **Override** inserted after **EventbookingController** compare to the original class name and extends the original class. For example:
 
 ```php
 /**
@@ -88,7 +88,7 @@ class EventbookingControllerOverrideRegister extends EventbookingControllerRegis
 
 }
 ```
-4.Copy the original code of the method you want to override into the class you defined above and customize it to meet your need. Please note that these classes extends the original class, so you can call any (public/protected) methods in the parent class. 
+4.Copy the original code of the method you want to override into the class you defined above and customize it to meet your need. Please note that these classes extends the original class, so you can call any (public/protected) methods in the parent class. See https://github.com/joomdonation/eventbooking-override-skeleton/blob/master/controller/override/register.php for sample of controller override
 
 ## Override method in a model class
 
@@ -96,7 +96,7 @@ If you need to override a method inside a model, please follow the steps below:
 
 1. Create folder **override** under components/com_eventbooking/model folder (or under  administrator/components/com_eventbooking/model if you want to override a backend model)
 2. Create a php file (same name with the php file which contains the method you want to override, for example **register.php**, **list.php**, **categories.php**)
-3. Add a blank class into that PHP file. The class name must follow this Rule: It has the word **Override** compare to the original class name and extends the original class. For example:
+3. Add a blank class into that PHP file. The class name must follow this Rule: It has the word **Override** inserted after **EventBookingModel** compare to the original class name and extends the original class. For example:
 
 ```php
 /**
@@ -109,7 +109,7 @@ class EventBookingModelOverrideRegister extends EventBookingModelRegister
 
 }
 ```
-4.Copy the original code of the method you want to override into the class you defined above and customize it to meet your need. Please note that these classes extends the original class, so you can call any (public/protected) methods in the parent class. 
+4.Copy the original code of the method you want to override into the class you defined above and customize it to meet your need. Please note that these classes extends the original class, so you can call any (public/protected) methods in the parent class. See https://github.com/joomdonation/eventbooking-override-skeleton/blob/master/model/override/register.php for a sample of override model classs.
 
 ## Override method in a view class
 
@@ -118,7 +118,7 @@ If you need to override a method inside a view, please follow the steps below:
 1. Create folder **override** under components/com_eventbooking/view folder (or under  administrator/components/com_eventbooking/view if you want to override a backend model)
 2. Create a new folder - the name of this folder must be the same with name of the view you want to override, for example **register**, **registrants**, **search**...
 3. Create a php file - same name with the php file which contains the method you want to override, usually html.php, put it into the above folder
-4. Add a blank class into that PHP file. The class name must follow this Rule: It has the word **Override** compare to the original class name and extends the original class. For example:
+4. Add a blank class into that PHP file. The class name must follow this Rule: It has the word **Override** inserted after EventbookingView compare to the original class name and extends the original class. For example:
 
 ```php
 /**
@@ -130,4 +130,4 @@ class EventbookingViewOverrideRegisterHtml extends EventbookingViewRegisterHtml
 {
 }
 ```
-5.Copy the original code of the method you want to override into the class you defined above and customize it to meet your need. Please note that these classes extends the original class, so you can call any (public/protected) methods in the parent class. 
+5.Copy the original code of the method you want to override into the class you defined above and customize it to meet your need. Please note that these classes extends the original class, so you can call any (public/protected) methods in the parent class. See https://github.com/joomdonation/eventbooking-override-skeleton/blob/master/view/override/register/html.php for sample of override view class
