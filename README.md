@@ -65,7 +65,27 @@ class EventbookingHelperOverrideJquery extends EventbookingHelperJquery
 {
 }
 ```
-
 4.Copy the original code of the method you want to override into the class you defined above and customize it to meet your need. Please note that these classes extends the original class, so you can call any (public/protected) methods in the parent class
 
-You can see the strucut
+You can see the skeleton of the override code for these methods here https://github.com/joomdonation/eventbooking-override-skeleton/tree/master/helper/override
+
+## Override method in a controller class
+
+If you need to override a method inside a controller, please follow the steps below:
+
+1. Create folder **override** under components/com_eventbooking/controller folder (or under  administrator/components/com_eventbooking/controller if you want to override a backend controller)
+2. Create a php file (same name with the php file which contains the method you want to override, for example **register.php**, **event.php**, **registrant.php**)
+3. Add a blank class into that PHP file. The class name must follow this Rule: It has the word **Override** compare to the original class name and extends the original class. For example:
+
+```php
+/**
+ * EventbookingControllerOverrideRegister class
+ *
+ * This class is used to show you how to override a controller class in Events Booking.
+ */
+class EventbookingControllerOverrideRegister extends EventbookingControllerRegister
+{
+
+}
+```
+4.Copy the original code of the method you want to override into the class you defined above and customize it to meet your need. Please note that these classes extends the original class, so you can call any (public/protected) methods in the parent class. 
